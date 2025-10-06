@@ -20,7 +20,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           EVENT_LIMIT: 10
           OUTPUT_STYLE: MARKDOWN
-          IGNORE_EVENTS: "[\"StarEvent\"]" # 👈 Evita error de starred repos
+          # Avoid the error of starred repos
+          IGNORE_EVENTS: '["StarEvent","WatchEvent","ForkEvent"]'
           HIDE_DETAILS_ON_PRIVATE_REPOS: false
           README_PATH: README.md
           COMMIT_MESSAGE: "⚡ Update README.md with latest activity"
