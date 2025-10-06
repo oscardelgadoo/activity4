@@ -1,0 +1,106 @@
+name: CI/CD Deployment Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: write   # needed to create releases and push artifacts
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    outputs:
+      artifact-name: build-artifact
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node (if repo uses node)
+        # remove or change if repo uses Python. Example provided; adapt to your repo.
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Build (example)
+        run: |
+          # adapt to your project's build commands
+          if [ -f package.json ]; then
+            npm install
+            npm run build || echo "no build script"
+          fi
+          # create artifact
+          zip -r build.zip . -x .git\* node_modules/\*
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-artifact
+          path: build.zip
+
+  deploy-staging:
+    name: Deploy → Staging
+    needs: build
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: build-artifact
+
+      - name: Create staging release (via API)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BUILD_TAG: ${{ secrets.BUILD_TAG }}
+          RELEASE_NOTE: ${{ secrets.RELEASE_NOTE }}
+          REPO: ${{ github.repository }}
+        run: |
+          echo "Creating release ${BUILD_TAG}"
+          owner=$(echo "${REPO}" | cut -d'/' -f1)
+          repo=$(echo "${REPO}" | cut -d'/' -f2)
+          # Create release
+          response=$(curl -s -X POST -H "Authorization: token ${GITHUB_TOKEN}" \
+            -H "Content-Type: application/json" \
+            -d "{\"tag_name\":\"${BUILD_TAG}\",\"name\":\"${BUILD_TAG}\",\"body\":\"${RELEASE_NOTE}\",\"draft\":false,\"prerelease\":true}" \
+            "https://api.github.com/repos/${owner}/${repo}/releases")
+          echo "Release response: $response"
+          # upload asset (optional)
+          upload_url=$(echo "$response" | python -c "import sys, json; print(json.load(sys.stdin).get('upload_url','').split('{')[0])")
+          if [ -n "$upload_url" ]; then
+            curl -s -X POST -H "Authorization: token ${GITHUB_TOKEN}" \
+              -H "Content-Type: application/zip" \
+              --data-binary @build.zip "${upload_url}?name=build.zip"
+            echo "Uploaded build.zip"
+          else
+            echo "No upload_url returned"
+          fi
+
+  deploy-production:
+    name: Deploy → Production
+    needs: deploy-staging
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: build-artifact
+
+      - name: Create production release (requires approval)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BUILD_TAG: ${{ secrets.BUILD_TAG }}
+          RELEASE_NOTE: ${{ secrets.RELEASE_NOTE }}
+          REPO: ${{ github.repository }}
+        run: |
+          owner=$(echo "${REPO}" | cut -d'/' -f1)
+          repo=$(echo "${REPO}" | cut -d'/' -f2)
+          echo "Creating production release ${BUILD_TAG}"
+          curl -s -X POST -H "Authorization: token ${GITHUB_TOKEN}" \
+            -H "Content-Type: application/json" \
+            -d "{\"tag_name\":\"${BUILD_TAG}\",\"name\":\"${BUILD_TAG}\",\"body\":\"${RELEASE_NOTE}\",\"draft\":false,\"prerelease\":false}" \
+            "https://api.github.com/repos/${owner}/${repo}/releases"
