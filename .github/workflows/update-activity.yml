@@ -3,7 +3,7 @@ name: Update GitHub Activity
 on:
   schedule:
     - cron: "*/30 * * * *" # Runs every 30 minutes
-  workflow_dispatch: # Allows manual triggering
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -20,7 +20,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           EVENT_LIMIT: 10
           OUTPUT_STYLE: MARKDOWN
-          IGNORE_EVENTS: "[]"
+          IGNORE_EVENTS: "[\"StarEvent\"]" # 👈 Evita error de starred repos
           HIDE_DETAILS_ON_PRIVATE_REPOS: false
           README_PATH: README.md
           COMMIT_MESSAGE: "⚡ Update README.md with latest activity"
