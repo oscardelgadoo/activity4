@@ -25,106 +25,16 @@ A GitHub Action that automatically updates your README file with the latest acti
 ## ✍️ Example
 
 <!--START_SECTION:activity-->
-1. 📝 Committed to [oscardelgadoo/Learn-Chinese](https://github.com/oscardelgadoo/Learn-Chinese/commit/58d610b633f42989517386f0724c75f6a0a91e95)
-2. 🔀 Merged [PR #18](https://github.com/oscardelgadoo/Learn-Chinese/pull/18) in [oscardelgadoo/Learn-Chinese](https://github.com/oscardelgadoo/Learn-Chinese)
-3. 📥 Opened [PR #18](https://github.com/oscardelgadoo/Learn-Chinese/pull/18) in [oscardelgadoo/Learn-Chinese](https://github.com/oscardelgadoo/Learn-Chinese)
-4. 🎉 Created a new branch [`oscardelgadoo-patch-11`](https://github.com/oscardelgadoo/Learn-Chinese/tree/oscardelgadoo-patch-11) in [oscardelgadoo/Learn-Chinese](https://github.com/oscardelgadoo/Learn-Chinese)
-5. 🌍 Made repository [oscardelgadoo/Learn-Chinese](https://github.com/oscardelgadoo/Learn-Chinese) public
-6. 📝 Committed to [oscardelgadoo/Learn-Chinese-2](https://github.com/oscardelgadoo/Learn-Chinese-2/commit/292370ef1adfb63e11ab90a3439b97118281f439)
-7. 🎉 Created a new repository [oscardelgadoo/Learn-Chinese-2](https://github.com/oscardelgadoo/Learn-Chinese-2)
-8. 🎉 Created a new branch [`main`](https://github.com/oscardelgadoo/Learn-Chinese-2/tree/main) in [oscardelgadoo/Learn-Chinese-2](https://github.com/oscardelgadoo/Learn-Chinese-2)
-9. 📝 Committed to [oscardelgadoo/Learn-Chinese](https://github.com/oscardelgadoo/Learn-Chinese/commit/63f3d31f5c8f1e76769e0e3939f026a3fd225561)
-10. 🔀 Merged [PR #17](https://github.com/oscardelgadoo/Learn-Chinese/pull/17) in [oscardelgadoo/Learn-Chinese](https://github.com/oscardelgadoo/Learn-Chinese)
-11. 📥 Opened [PR #17](https://github.com/oscardelgadoo/Learn-Chinese/pull/17) in [oscardelgadoo/Learn-Chinese](https://github.com/oscardelgadoo/Learn-Chinese)
-12. 🎉 Created a new branch [`oscardelgadoo-patch-10`](https://github.com/oscardelgadoo/Learn-Chinese/tree/oscardelgadoo-patch-10) in [oscardelgadoo/Learn-Chinese](https://github.com/oscardelgadoo/Learn-Chinese)
-13. 🗣 Commented on issue [#16](https://github.com/oscardelgadoo/Learn-Chinese/issues/16) in [oscardelgadoo/Learn-Chinese](https://github.com/oscardelgadoo/Learn-Chinese): [View Comment](https://github.com/oscardelgadoo/Learn-Chinese/issues/16#issuecomment-3347763658)
-14. 🗣 Commented on an issue in a private repo
-15. 🆕 Opened an issue in a private repo
-16. ❌ Closed an issue in a private repo
-17. 📝 Committed to a private repo
-18. 🔀 Merged a PR in a private repo
-19. 📥 Opened a PR in a private repo
-20. 🎉 Created a new branch `oscardelgadoo-patch-9` in a private repo
-21. 🎉 Created a new branch `14-automatization-readme5` in a private repo
-22. 🆕 Opened an issue in a private repo
-23. 📝 Committed to a private repo
-24. 🔀 Merged a PR in a private repo
-25. 📥 Opened a PR in a private repo
-26. 🎉 Created a new branch `oscardelgadoo-patch-8` in a private repo
-27. 📝 Committed to a private repo
-28. 🔀 Merged a PR in a private repo
-29. 📥 Opened a PR in a private repo
-30. 🎉 Created a new branch `oscardelgadoo-patch-7` in a private repo
-31. ❌ Closed a PR in a private repo
-32. 📝 Committed to a private repo
-33. 📝 Committed to a private repo
-34. 📝 Committed to a private repo
-35. 🔀 Merged a PR in a private repo
-36. 📥 Opened a PR in a private repo
-37. 🎉 Created a new branch `oscardelgadoo-patch-6` in a private repo
-38. 📥 Opened a PR in a private repo
-39. 📝 Committed to a private repo
-40. 🔀 Merged a PR in a private repo
-41. 📥 Opened a PR in a private repo
-42. 🎉 Created a new branch `oscardelgadoo-patch-5` in a private repo
-43. 📝 Committed to a private repo
-44. 🔀 Merged a PR in a private repo
-45. 📥 Opened a PR in a private repo
-46. 🎉 Created a new branch `oscardelgadoo-patch-4` in a private repo
-47. 📝 Committed to a private repo
-48. 🔀 Merged a PR in a private repo
-49. 📥 Opened a PR in a private repo
-50. 🎉 Created a new branch `oscardelgadoo-patch-3` in a private repo
-51. 📝 Committed to a private repo
-52. 🔀 Merged a PR in a private repo
-53. 📥 Opened a PR in a private repo
-54. 🎉 Created a new branch `oscardelgadoo-patch-2-1` in a private repo
-55. 🎉 Created a new branch `oscardelgadoo-patch-2` in a private repo
-56. 📝 Committed to a private repo
-57. 🔀 Merged a PR in a private repo
-58. 📥 Opened a PR in a private repo
-59. 🎉 Created a new branch `oscardelgadoo-patch-1` in a private repo
-60. 📝 Committed to a private repo
-61. 📝 Committed to a private repo
-62. 📝 Committed to a private repo
-63. 📝 Committed to a private repo
-64. ❌ Closed an issue in a private repo
-65. 🔀 Merged a PR in a private repo
-66. 📥 Opened a PR in a private repo
-67. 📝 Committed to a private repo
-68. 🎉 Created a new branch `3-automatization-readme` in a private repo
-69. 🆕 Opened an issue in a private repo
-70. 🗑️ Deleted a branch `Pronunciation` in a private repo
-71. 🗑️ Deleted a branch `Learn-Basics` in a private repo
-72. ❌ Closed a PR in a private repo
-73. 🗑️ Deleted a branch `Drawing-Characters` in a private repo
-74. 🗑️ Deleted a branch `1-automatization-of-readme` in a private repo
-75. 📥 Opened a PR in a private repo
-76. 📝 Committed to a private repo
-77. 📝 Committed to a private repo
-78. 🎉 Created a new branch `1-automatization-of-readme` in a private repo
-79. 📝 Committed to a private repo
-80. 🎉 Created a new branch `Drawing-Characters` in a private repo
-81. 🎉 Created a new branch `Learn-Basics` in a private repo
-82. 🗑️ Deleted a branch `LCH-1-Learn-basics` in a private repo
-83. 🗑️ Deleted a branch `LCH-2-Drawing-Characters` in a private repo
-84. 🆕 Opened an issue in a private repo
-85. 🎉 Created a new branch `Pronunciation` in a private repo
-86. 🗑️ Deleted a branch `Learn-basic-words` in a private repo
-87. 🎉 Created a new branch `Learn-basic-words` in a private repo
-88. 🗑️ Deleted a branch `https/ofdelgado2003.atlassian.net/browse/LCH-1` in a private repo
-89. 🎉 Created a new branch `https/ofdelgado2003.atlassian.net/browse/LCH-1` in a private repo
-90. 🗑️ Deleted a branch `https/ofdelgado2003.atlassian.net/browse/LCH-1` in a private repo
-91. 🗑️ Deleted a branch `LCH-1` in a private repo
-92. 🗑️ Deleted a branch `LCH-2` in a private repo
-93. 🎉 Created a new branch `https/ofdelgado2003.atlassian.net/browse/LCH-1` in a private repo
-94. 🎉 Created a new branch `LCH-2` in a private repo
-95. 🎉 Created a new branch `LCH-1` in a private repo
-96. 🎉 Created a new branch `main` in a private repo
-97. 🎉 Created a new private repository
-98. 🆕 Opened an issue in a private repo
-99. 🎉 Created a new branch `main` in a private repo
-100. 🎉 Created a new private repository
+1. 🆕 Opened an issue [#47](https://github.com/TheDanniCraft/activity-log/issues/47) in [TheDanniCraft/activity-log](https://github.com/TheDanniCraft/activity-log)
+2. 🆕 Opened an issue [#46](https://github.com/TheDanniCraft/activity-log/issues/46) in [TheDanniCraft/activity-log](https://github.com/TheDanniCraft/activity-log)
+3. 🚀 Committed to [TheDanniCraft/clipify](https://github.com/TheDanniCraft/clipify/commit/84394c46d82948fbe74ab7f85f3d0e96a01b7dc2)
+4. 🚀 Committed to [TheDanniCraft/clipify](https://github.com/TheDanniCraft/clipify/commit/62f761c63436ff08e4db181bf2913a62ec3fae3e)
+5. 🔥 Deleted a branch `hotfix-secret-name` in [TheDanniCraft/activity-log](https://github.com/TheDanniCraft/activity-log)
+6. 🚀 Committed to [TheDanniCraft/activity-log](https://github.com/TheDanniCraft/activity-log/commit/894f2ca5323c9f581275b26e76b8f9afc9014faa)
+7. 🔀 Merged [PR #45](https://github.com/TheDanniCraft/activity-log/pull/45) in [TheDanniCraft/activity-log](https://github.com/TheDanniCraft/activity-log)
+8. 🔀 Opened [PR #45](https://github.com/TheDanniCraft/activity-log/pull/45) in [TheDanniCraft/activity-log](https://github.com/TheDanniCraft/activity-log)
+9. 🚀 Committed to [TheDanniCraft/activity-log](https://github.com/TheDanniCraft/activity-log/commit/95aed1dc1862d8b82ae66b0ff141b67b363ccb2b)
+10. ✨ Created a new branch [`hotfix-secret-name`](https://github.com/TheDanniCraft/activity-log/tree/hotfix-secret-name) in [TheDanniCraft/activity-log](https://github.com/TheDanniCraft/activity-log)
 <!--END_SECTION:activity-->
 
 ## 📖Usage
