@@ -188,7 +188,13 @@ jobs:
           TEST_ENV: production
         run: |
           TAG="v$(date +%Y.%m.%d)-prod"
-          NOTE="${{ github.event.inputs.note }}"
+          
+          # Usar la nota del input si existe, sino usar default
+          if [ "${{ github.event.inputs.note }}" != "" ]; then
+            NOTE="${{ github.event.inputs.note }}"
+          else
+            NOTE="Production release - All tests passed"
+          fi
           
           echo "✅ Creating PRODUCTION release: $TAG"
           git tag -a "$TAG" -m "$NOTE"
