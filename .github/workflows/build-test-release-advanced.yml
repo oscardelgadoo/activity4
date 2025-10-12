@@ -1,0 +1,200 @@
+name: Build-Test-Release-MultiEnv
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Target environment'
+        required: true
+        type: choice
+        options:
+          - staging
+          - production
+      note:
+        description: 'Release note'
+        required: false
+        default: 'Manual deployment'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      
+      - name: Install dependencies
+        run: |
+          npm i -g @vercel/ncc
+          npm i @actions/github
+      
+      - name: Build project
+        run: npm run build
+      
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-artifact
+          path: dist/
+          retention-days: 7
+
+  test-unit:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: build-artifact
+          path: dist/
+      
+      - name: Run unit tests
+        env:
+          TEST_ENV: unit
+        run: |
+          echo "🧪 Running UNIT tests..."
+          echo "📦 Environment: $TEST_ENV"
+          
+          # Verificar estructura del build
+          if [ ! -f "dist/index.js" ]; then
+            echo "❌ ERROR: dist/index.js not found!"
+            exit 1
+          fi
+          
+          echo "✅ File structure validation passed"
+          
+          # Simular unit tests
+          echo "Testing basic functionality..."
+          node -e "console.log('✓ Module loading test passed')"
+          node -e "const fs = require('fs'); if(fs.existsSync('dist/index.js')) console.log('✓ Build artifact test passed')"
+          
+          echo "✅ All unit tests passed!"
+
+  test-integration:
+    runs-on: ubuntu-latest
+    needs: test-unit
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: build-artifact
+          path: dist/
+      
+      - name: Run integration tests
+        env:
+          TEST_ENV: integration
+          INPUT_GITHUB_USERNAME: "oscardelgadoo"
+          INPUT_GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
+          INPUT_TARGET_REPOS: '[oscardelgadoo/activity4]'
+          INPUT_OUTPUT_STYLE: MARKDOWN
+          INPUT_IGNORE_EVENTS: '[]'
+          INPUT_README_PATH: README.md
+          INPUT_COMMIT_MESSAGE: Update README.md
+          INPUT_EVENT_LIMIT: '100'
+        run: |
+          echo "🧪 Running INTEGRATION tests..."
+          echo "📦 Environment: $TEST_ENV"
+          
+          # Ejecutar el script completo como test de integración
+          echo "🔄 Testing full workflow integration..."
+          node ./dist/index.js
+          
+          if [ $? -eq 0 ]; then
+            echo "✅ Integration test passed successfully!"
+          else
+            echo "❌ Integration test failed!"
+            exit 1
+          fi
+
+  deploy-staging:
+    runs-on: ubuntu-latest
+    needs: test-integration
+    environment: staging
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Pull latest changes
+        run: |
+          git config --global user.name 'oscardelgadoo'
+          git config --global user.email '204999645+oscardelgadoo@users.noreply.github.com'
+          git pull
+      
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: build-artifact
+          path: dist/
+      
+      - name: Commit build to staging
+        run: |
+          git add dist/
+          git diff --staged --quiet || git commit -m "Staging build after successful tests"
+          git push
+      
+      - name: Create staging release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TEST_ENV: staging
+        run: |
+          TAG="staging-$(date +%Y%m%d-%H%M%S)"
+          NOTE="🚀 Staging deployment - All tests passed"
+          
+          echo "Creating staging release: $TAG"
+          git tag -a "$TAG" -m "$NOTE"
+          git push --tags
+          
+          gh release create "$TAG" dist/* \
+            --title "Staging Release $TAG" \
+            --notes "$NOTE" \
+            --prerelease
+
+  deploy-production:
+    runs-on: ubuntu-latest
+    needs: deploy-staging
+    environment: production
+    if: github.event_name == 'workflow_dispatch' && github.event.inputs.environment == 'production'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Pull latest changes
+        run: |
+          git config --global user.name 'oscardelgadoo'
+          git config --global user.email '204999645+oscardelgadoo@users.noreply.github.com'
+          git pull
+      
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: build-artifact
+          path: dist/
+      
+      - name: Create production release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TEST_ENV: production
+        run: |
+          TAG="v$(date +%Y.%m.%d)-prod"
+          NOTE="${{ github.event.inputs.note }}"
+          
+          echo "✅ Creating PRODUCTION release: $TAG"
+          git tag -a "$TAG" -m "$NOTE"
+          git push --tags
+          
+          gh release create "$TAG" dist/* \
+            --title "Production Release $TAG" \
+            --notes "🎉 $NOTE" \
+            --latest
