@@ -25,16 +25,106 @@ A GitHub Action that automatically updates your README file with the latest acti
 ## ✍️ Example
 
 <!--START_SECTION:activity-->
-1. 🗣 Commented on issue [#56](https://github.com/TheDanniCraft/activity-log/issues/56) in [TheDanniCraft/activity-log](https://github.com/TheDanniCraft/activity-log): [View Comment](https://github.com/TheDanniCraft/activity-log/issues/56#issuecomment-3381251723)
-2. 🗣 Commented on issue [#55](https://github.com/TheDanniCraft/activity-log/issues/55) in [TheDanniCraft/activity-log](https://github.com/TheDanniCraft/activity-log): [View Comment](https://github.com/TheDanniCraft/activity-log/issues/55#issuecomment-3378622903)
-3. 🗣 Commented on a review of [PR #42](https://github.com/TheDanniCraft/activity-log/pull/42) in [TheDanniCraft/activity-log](https://github.com/TheDanniCraft/activity-log): [View Comment](https://github.com/TheDanniCraft/activity-log/pull/42#pullrequestreviewcomment-2408849995)
-4. 🗣 Commented on a review of [PR #42](https://github.com/TheDanniCraft/activity-log/pull/42) in [TheDanniCraft/activity-log](https://github.com/TheDanniCraft/activity-log): [View Comment](https://github.com/TheDanniCraft/activity-log/pull/42#pullrequestreviewcomment-2408640496)
-5. 🔎 Reviewed [PR #42](https://github.com/TheDanniCraft/activity-log/pull/42) in [TheDanniCraft/activity-log](https://github.com/TheDanniCraft/activity-log)
-6. 🔎 Reviewed [PR #42](https://github.com/TheDanniCraft/activity-log/pull/42) in [TheDanniCraft/activity-log](https://github.com/TheDanniCraft/activity-log)
-7. 🆕 Opened an issue [#55](https://github.com/TheDanniCraft/activity-log/issues/55) in [TheDanniCraft/activity-log](https://github.com/TheDanniCraft/activity-log)
-8. 🗣 Commented on issue [#53](https://github.com/TheDanniCraft/activity-log/issues/53) in [TheDanniCraft/activity-log](https://github.com/TheDanniCraft/activity-log): [View Comment](https://github.com/TheDanniCraft/activity-log/issues/53#issuecomment-3370683624)
-9. 🔥 Deleted a branch `copilot/fix-9a865b17-3f43-4526-beb8-170937a6167b` in [TheDanniCraft/activity-log](https://github.com/TheDanniCraft/activity-log)
-10. 🗣 Commented on issue [#51](https://github.com/TheDanniCraft/activity-log/issues/51) in [TheDanniCraft/activity-log](https://github.com/TheDanniCraft/activity-log): [View Comment](https://github.com/TheDanniCraft/activity-log/issues/51#issuecomment-3370598874)
+1. 📝 Committed to [oscardelgadoo/activity4](https://github.com/oscardelgadoo/activity4/commit/89fc94eafbaf1face3c7b5c05c201f706c87ca9b)
+2. 📝 Committed to [oscardelgadoo/activity4](https://github.com/oscardelgadoo/activity4/commit/31c0a4f3b33b37a0d56f1a9e477c9805d8a31759)
+3. 📝 Committed to [oscardelgadoo/activity4](https://github.com/oscardelgadoo/activity4/commit/124b24e4e6b357bf2ad09a3e25adfc0a46845b58)
+4. 📝 Committed to [oscardelgadoo/activity4](https://github.com/oscardelgadoo/activity4/commit/203be08c3c32837d5e8f21a9bdf9321ff2364748)
+5. 📝 Committed to [oscardelgadoo/activity4](https://github.com/oscardelgadoo/activity4/commit/3c468e10dea4d1cc65381dc1b3cd9b137c076950)
+6. 📝 Committed to [oscardelgadoo/activity4](https://github.com/oscardelgadoo/activity4/commit/134177122ca177e5368008da1c1c9cf7884c9803)
+7. 📝 Committed to [oscardelgadoo/activity4](https://github.com/oscardelgadoo/activity4/commit/1acf31c51078630446b95a3f61bc31ff6d42c125)
+8. 📝 Committed to [oscardelgadoo/activity4](https://github.com/oscardelgadoo/activity4/commit/5c6ccd3b9ff29dd46ea259e993faccd633b6c8d3)
+9. undefined
+10. undefined
+11. 📝 Committed to [oscardelgadoo/activity4](https://github.com/oscardelgadoo/activity4/commit/ae39f54138b57f334bdda87c76c9f6bb95db10aa)
+12. undefined
+13. undefined
+14. 🍴 Forked [TheDanniCraft/activity-log](https://github.com/TheDanniCraft/activity-log)
+15. 📝 Committed to [oscardelgadoo/Learn-Chinese](https://github.com/oscardelgadoo/Learn-Chinese/commit/58d610b633f42989517386f0724c75f6a0a91e95)
+16. 🔀 Merged [PR #18](https://github.com/oscardelgadoo/Learn-Chinese/pull/18) in [oscardelgadoo/Learn-Chinese](https://github.com/oscardelgadoo/Learn-Chinese)
+17. 📥 Opened [PR #18](https://github.com/oscardelgadoo/Learn-Chinese/pull/18) in [oscardelgadoo/Learn-Chinese](https://github.com/oscardelgadoo/Learn-Chinese)
+18. 🎉 Created a new branch [`oscardelgadoo-patch-11`](https://github.com/oscardelgadoo/Learn-Chinese/tree/oscardelgadoo-patch-11) in [oscardelgadoo/Learn-Chinese](https://github.com/oscardelgadoo/Learn-Chinese)
+19. 🌍 Made repository [oscardelgadoo/Learn-Chinese](https://github.com/oscardelgadoo/Learn-Chinese) public
+20. 📝 Committed to [oscardelgadoo/Learn-Chinese-2](https://github.com/oscardelgadoo/Learn-Chinese-2/commit/292370ef1adfb63e11ab90a3439b97118281f439)
+21. 🎉 Created a new repository [oscardelgadoo/Learn-Chinese-2](https://github.com/oscardelgadoo/Learn-Chinese-2)
+22. 🎉 Created a new branch [`main`](https://github.com/oscardelgadoo/Learn-Chinese-2/tree/main) in [oscardelgadoo/Learn-Chinese-2](https://github.com/oscardelgadoo/Learn-Chinese-2)
+23. 📝 Committed to [oscardelgadoo/Learn-Chinese](https://github.com/oscardelgadoo/Learn-Chinese/commit/63f3d31f5c8f1e76769e0e3939f026a3fd225561)
+24. 🔀 Merged [PR #17](https://github.com/oscardelgadoo/Learn-Chinese/pull/17) in [oscardelgadoo/Learn-Chinese](https://github.com/oscardelgadoo/Learn-Chinese)
+25. 📥 Opened [PR #17](https://github.com/oscardelgadoo/Learn-Chinese/pull/17) in [oscardelgadoo/Learn-Chinese](https://github.com/oscardelgadoo/Learn-Chinese)
+26. 🎉 Created a new branch [`oscardelgadoo-patch-10`](https://github.com/oscardelgadoo/Learn-Chinese/tree/oscardelgadoo-patch-10) in [oscardelgadoo/Learn-Chinese](https://github.com/oscardelgadoo/Learn-Chinese)
+27. 🗣 Commented on issue [#16](https://github.com/oscardelgadoo/Learn-Chinese/issues/16) in [oscardelgadoo/Learn-Chinese](https://github.com/oscardelgadoo/Learn-Chinese): [View Comment](https://github.com/oscardelgadoo/Learn-Chinese/issues/16#issuecomment-3347763658)
+28. 🗣 Commented on an issue in a private repo
+29. 🆕 Opened an issue in a private repo
+30. ❌ Closed an issue in a private repo
+31. 📝 Committed to a private repo
+32. 🔀 Merged a PR in a private repo
+33. 📥 Opened a PR in a private repo
+34. 🎉 Created a new branch `oscardelgadoo-patch-9` in a private repo
+35. 🎉 Created a new branch `14-automatization-readme5` in a private repo
+36. 🆕 Opened an issue in a private repo
+37. 📝 Committed to a private repo
+38. 🔀 Merged a PR in a private repo
+39. 📥 Opened a PR in a private repo
+40. 🎉 Created a new branch `oscardelgadoo-patch-8` in a private repo
+41. 📝 Committed to a private repo
+42. 🔀 Merged a PR in a private repo
+43. 📥 Opened a PR in a private repo
+44. 🎉 Created a new branch `oscardelgadoo-patch-7` in a private repo
+45. ❌ Closed a PR in a private repo
+46. 📝 Committed to a private repo
+47. 📝 Committed to a private repo
+48. 📝 Committed to a private repo
+49. 🔀 Merged a PR in a private repo
+50. 📥 Opened a PR in a private repo
+51. 🎉 Created a new branch `oscardelgadoo-patch-6` in a private repo
+52. 📥 Opened a PR in a private repo
+53. 📝 Committed to a private repo
+54. 🔀 Merged a PR in a private repo
+55. 📥 Opened a PR in a private repo
+56. 🎉 Created a new branch `oscardelgadoo-patch-5` in a private repo
+57. 📝 Committed to a private repo
+58. 🔀 Merged a PR in a private repo
+59. 📥 Opened a PR in a private repo
+60. 🎉 Created a new branch `oscardelgadoo-patch-4` in a private repo
+61. 📝 Committed to a private repo
+62. 🔀 Merged a PR in a private repo
+63. 📥 Opened a PR in a private repo
+64. 🎉 Created a new branch `oscardelgadoo-patch-3` in a private repo
+65. 📝 Committed to a private repo
+66. 🔀 Merged a PR in a private repo
+67. 📥 Opened a PR in a private repo
+68. 🎉 Created a new branch `oscardelgadoo-patch-2-1` in a private repo
+69. 🎉 Created a new branch `oscardelgadoo-patch-2` in a private repo
+70. 📝 Committed to a private repo
+71. 🔀 Merged a PR in a private repo
+72. 📥 Opened a PR in a private repo
+73. 🎉 Created a new branch `oscardelgadoo-patch-1` in a private repo
+74. 📝 Committed to a private repo
+75. 📝 Committed to a private repo
+76. 📝 Committed to a private repo
+77. 📝 Committed to a private repo
+78. ❌ Closed an issue in a private repo
+79. 🔀 Merged a PR in a private repo
+80. 📥 Opened a PR in a private repo
+81. 📝 Committed to a private repo
+82. 🎉 Created a new branch `3-automatization-readme` in a private repo
+83. 🆕 Opened an issue in a private repo
+84. 🗑️ Deleted a branch `Pronunciation` in a private repo
+85. 🗑️ Deleted a branch `Learn-Basics` in a private repo
+86. ❌ Closed a PR in a private repo
+87. 🗑️ Deleted a branch `Drawing-Characters` in a private repo
+88. 🗑️ Deleted a branch `1-automatization-of-readme` in a private repo
+89. 📥 Opened a PR in a private repo
+90. 📝 Committed to a private repo
+91. 📝 Committed to a private repo
+92. 🎉 Created a new branch `1-automatization-of-readme` in a private repo
+93. 📝 Committed to a private repo
+94. 🎉 Created a new branch `Drawing-Characters` in a private repo
+95. 🎉 Created a new branch `Learn-Basics` in a private repo
+96. 🗑️ Deleted a branch `LCH-1-Learn-basics` in a private repo
+97. 🗑️ Deleted a branch `LCH-2-Drawing-Characters` in a private repo
+98. 🆕 Opened an issue in a private repo
+99. 🎉 Created a new branch `Pronunciation` in a private repo
+100. 🗑️ Deleted a branch `Learn-basic-words` in a private repo
 <!--END_SECTION:activity-->
 
 ## 📖Usage
